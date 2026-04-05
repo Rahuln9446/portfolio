@@ -1497,7 +1497,7 @@
             }
         };
 
-        const heroLabel = document.querySelector('.hero-label');
+        // const heroLabel = document.querySelector('.hero-label');
         const heroTitle = document.querySelector('.hero-title');
         const heroSubtitle = document.querySelector('.hero-subtitle');
         const statsBar = document.querySelector('.stats-bar');
@@ -1511,13 +1511,13 @@
                 document.querySelectorAll('.audience-tab').forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
 
-                heroLabel.classList.add('fade-out');
+                // heroLabel.classList.add('fade-out');
                 heroTitle.classList.add('fade-out');
                 heroSubtitle.classList.add('fade-out');
                 statsBar.classList.add('fade-out');
 
                 setTimeout(() => {
-                    heroLabel.textContent = content.label;
+                    // heroLabel.textContent = content.label;
                     heroTitle.innerHTML = content.title;
                     heroSubtitle.textContent = content.subtitle;
 
@@ -1526,12 +1526,12 @@
                         item.querySelector('.stat-label').textContent = content.stats[index].label;
                     });
 
-                    heroLabel.classList.remove('fade-out');
+                    // heroLabel.classList.remove('fade-out');
                     heroTitle.classList.remove('fade-out');
                     heroSubtitle.classList.remove('fade-out');
                     statsBar.classList.remove('fade-out');
 
-                    heroLabel.classList.add('fade-in');
+                    // heroLabel.classList.add('fade-in');
                     heroTitle.classList.add('fade-in');
                     heroSubtitle.classList.add('fade-in');
                     statsBar.classList.add('fade-in');
