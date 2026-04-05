@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahul N | Project Coordinator & UX Analyst</title>
+    <title>Rahul N | Digital Product Designer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
@@ -16,18 +16,6 @@
             --text-secondary: #6b6b6b;
             --accent: #e84545;
             --accent-hover: #ff5252;
-            --border: rgba(255,255,255,0.1);
-        }
-
-        [data-theme="light"] {
-            --bg-dark: #f8f7f4;
-            --bg-card: #ffffff;
-            --bg-light: #eeeeee;
-            --text-primary: #1a1a1a;
-            --text-secondary: #666666;
-            --accent: #e84545;
-            --accent-hover: #ff5252;
-            --border: rgba(0,0,0,0.1);
         }
 
         * {
@@ -71,8 +59,7 @@
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            background: linear-gradient(to bottom, var(--bg-dark), transparent);
-            transition: background 0.3s ease;
+            background: linear-gradient(to bottom, rgba(13,13,13,0.95), transparent);
         }
 
         .nav-logo {
@@ -121,43 +108,13 @@
             transform: translateY(-2px);
         }
 
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .theme-toggle {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--bg-light);
-            border: 1px solid var(--border);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            transition: all 0.3s ease;
-        }
-
-        .theme-toggle:hover {
-            background: var(--bg-card);
-            border-color: var(--accent);
-            transform: scale(1.1);
-        }
-
-        [data-theme="light"] .theme-toggle {
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
         /* Hero Section */
         .hero {
-            min-height: 85vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 100px 60px 60px;
+            padding: 120px 60px 80px;
             position: relative;
             overflow: hidden;
         }
@@ -223,88 +180,27 @@
         }
 
         .hero-content {
-            width: 100%;
             max-width: 900px;
             position: relative;
             z-index: 10;
         }
 
-        .hero-kpis {
-            display: flex;
-            gap: 40px;
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid var(--border);
-        }
-
-        .hero-kpi {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .hero-kpi-icon {
-            font-size: 20px;
-        }
-
-        .hero-kpi-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .hero-kpi-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--text-primary);
-            line-height: 1;
-        }
-
-        .hero-kpi-label {
-            font-size: 10px;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
         .hero-label {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 600;
             color: var(--accent);
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
             transition: opacity 0.3s ease;
-        }
-
-        /* Audience Tabs */
-        .audience-tabs {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .audience-tab {
-            padding: 8px 16px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid var(--bg-light);
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 500;
-            color: var(--text-secondary);
-            cursor: pointer;
-            transition: all 0.3s ease;
         }
 
         .hero-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(36px, 6vw, 64px);
+            font-size: clamp(48px, 8vw, 90px);
             font-weight: 600;
-            line-height: 1.1;
-            margin-bottom: 20px;
+            line-height: 1.05;
+            margin-bottom: 30px;
             transition: opacity 0.3s ease;
         }
 
@@ -317,19 +213,18 @@
         }
 
         .hero-subtitle {
-            font-size: clamp(16px, 1.5vw, 18px);
+            font-size: clamp(18px, 2vw, 22px);
             color: var(--text-secondary);
-            max-width: 500px;
-            line-height: 1.6;
-            margin-bottom: 30px;
+            max-width: 550px;
+            line-height: 1.7;
+            margin-bottom: 50px;
             transition: opacity 0.3s ease;
         }
 
         .hero-cta-group {
             display: flex;
-            gap: 16px;
+            gap: 20px;
             flex-wrap: wrap;
-            margin-bottom: 40px;
             transition: opacity 0.3s ease;
         }
 
@@ -337,8 +232,8 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 14px 24px;
-            font-size: 14px;
+            padding: 18px 32px;
+            font-size: 15px;
             font-weight: 600;
             text-decoration: none;
             border-radius: 8px;
@@ -365,6 +260,35 @@
         .btn-secondary:hover {
             border-color: var(--text-primary);
             color: var(--text-primary);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            gap: 60px;
+            padding: 40px 0;
+            border-top: 1px solid var(--bg-light);
+            border-bottom: 1px solid var(--bg-light);
+            margin-top: 80px;
+            transition: opacity 0.3s ease;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 600;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 8px;
         }
 
         @keyframes fadeInUp {
@@ -465,27 +389,23 @@
         }
 
         .work-card {
-            display: block;
             background: var(--bg-card);
             border-radius: 16px;
             overflow: hidden;
-            text-decoration: none;
-            color: inherit;
             transition: all 0.4s ease;
         }
 
         .work-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
         }
 
-        .work-card:hover .work-title {
-            color: var(--accent);
+        .work-card:nth-child(odd) {
+            transform: translateY(40px);
         }
 
-        .work-card:visited,
-        .work-card:active {
-            color: inherit;
+        .work-card:nth-child(odd):hover {
+            transform: translateY(30px);
         }
 
         .work-image {
@@ -1066,29 +986,12 @@
             .stats-bar { flex-wrap: wrap; gap: 30px; }
         }
 
-        @media (max-width: 900px) {
-            .hero-kpis { 
-                flex-wrap: wrap;
-                width: 100%; 
-                margin-top: 30px;
-            }
-            .hero-kpi { 
-                flex: 1 1 calc(50% - 20px);
-            }
-            .hero-title { font-size: 36px; }
-        }
-
         @media (max-width: 640px) {
-            .hero { min-height: auto; padding: 100px 24px 60px; }
-            .hero-kpis { 
-                flex-direction: column;
-                gap: 16px; 
-            }
-            .hero-kpi { flex: 1 1 100%; }
-            .hero-kpi-number { font-size: 22px; }
+            .hero-title { font-size: 36px; }
             .audience-tabs { justify-content: center; }
             .hero-cta-group { flex-direction: column; }
-            .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat-item { flex: 1 1 40%; }
+            .process-grid { grid-template-columns: 1fr; }
             .process-step::after { display: none; }
             body { cursor: auto; }
         }
@@ -1105,12 +1008,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="nav-right">
-            <button class="theme-toggle" id="themeToggle">
-                <span class="theme-icon">🌙</span>
-            </button>
-            <a href="#contact" class="nav-cta">Get in Touch</a>
-        </div>
+        <a href="#contact" class="nav-cta">Get in Touch</a>
     </nav>
 
     <section class="hero">
@@ -1119,58 +1017,44 @@
             <div class="hero-shape hero-shape-2"></div>
         </div>
         <div class="hero-content">
-            <div class="hero-content-left">
-                <div class="audience-tabs">
-                    <span class="audience-tab active" data-audience="anyone">For Anyone</span>
-                    <span class="audience-tab" data-audience="recruiters">Recruiters</span>
-                    <span class="audience-tab" data-audience="designers">Designers</span>
-                    <span class="audience-tab" data-audience="pm">Product Managers</span>
-                    <span class="audience-tab" data-audience="engineers">Engineers</span>
-                </div>
-                <p class="hero-label">Project Coordinator & UX Analyst</p>
-                <h1 class="hero-title">
-                    <span class="hero-title-line">I blend UX Design, AI Prototyping</span>
-                    <span class="hero-title-line">& Product Leadership</span>
-                    <span class="hero-title-line">to drive <span class="hero-title-accent">results</span></span>
-                </h1>
-                <p class="hero-subtitle">
-                    I design and develop intuitive digital products that solve real problems. 
-                    Combining strategic thinking with hands-on execution to create experiences 
-                    that feel right — crafted with care.
-                </p>
-                <div class="hero-cta-group">
-                    <a href="#contact" class="btn btn-primary">Let's Talk</a>
-                    <a href="https://dribbble.com/rahulnambala" target="_blank" class="btn btn-secondary">View Work</a>
-                </div>
+            <div class="audience-tabs">
+                <span class="audience-tab active" data-audience="anyone">For Anyone</span>
+                <span class="audience-tab" data-audience="recruiters">Recruiters</span>
+                <span class="audience-tab" data-audience="designers">Designers</span>
+                <span class="audience-tab" data-audience="pm">Product Managers</span>
+                <span class="audience-tab" data-audience="engineers">Engineers</span>
             </div>
-            <div class="hero-kpis">
-                <div class="hero-kpi">
-                    <span class="hero-kpi-text">
-                        <span class="hero-kpi-number">8+</span>
-                        <span class="hero-kpi-label">Years</span>
-                    </span>
-                    <span class="hero-kpi-icon">⏱️</span>
+            <!-- <p class="hero-label">Digital Product Designer</p> -->
+            <h1 class="hero-title">
+                <span class="hero-title-line">Planning and building</span>
+                <span class="hero-title-line">digital products with</span>
+                <span class="hero-title-line">craft & <span class="hero-title-accent">experience</span></span>
+            </h1>
+            <p class="hero-subtitle">
+                I design and develop intuitive digital products that solve real problems. 
+                Combining strategic thinking with hands-on execution to create experiences 
+                that feel right crafted with care.
+            </p>
+            <div class="hero-cta-group">
+                <a href="#contact" class="btn btn-primary">Let's Talk</a>
+                <a href="#work" class="btn btn-secondary">View Work</a>
+            </div>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Years Experience</div>
                 </div>
-                <div class="hero-kpi">
-                    <span class="hero-kpi-text">
-                        <span class="hero-kpi-number">1M+</span>
-                        <span class="hero-kpi-label">Users</span>
-                    </span>
-                    <span class="hero-kpi-icon">👥</span>
+<!--                 <div class="stat-item">
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-label">Users Onboarded</div>
+                </div> -->
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Industry Awards</div>
                 </div>
-                <div class="hero-kpi">
-                    <span class="hero-kpi-text">
-                        <span class="hero-kpi-number">2</span>
-                        <span class="hero-kpi-label">Awards</span>
-                    </span>
-                    <span class="hero-kpi-icon">🏆</span>
-                </div>
-                <div class="hero-kpi">
-                    <span class="hero-kpi-text">
-                        <span class="hero-kpi-number">50-80%</span>
-                        <span class="hero-kpi-label">Faster</span>
-                    </span>
-                    <span class="hero-kpi-icon">⚡</span>
+                <div class="stat-item">
+                    <div class="stat-number">30-50%</div>
+                    <div class="stat-label">Faster Prototyping using AI</div>
                 </div>
             </div>
         </div>
@@ -1186,13 +1070,12 @@
                     <p>
                         I'm a product designer focused on planning and building digital products 
                         that make a difference. With 8+ years bridging UX design and development, 
-                        I bring a unique perspective — understanding both user needs and technical 
+                        I bring a unique perspective understanding both user needs and technical 
                         realities to deliver products that work.
                     </p>
                     <p>
                         Currently leading digital transformation at Fingent Global Solutions, where 
-                        I've helped transition legacy systems to digital platforms serving over 
-                        1 million users. I believe great products come from deeply understanding 
+                        I've helped transition legacy systems to digital platforms. I believe great products come from deeply understanding 
                         people and then crafting solutions that serve them elegantly.
                     </p>
                 </div>
@@ -1207,54 +1090,57 @@
                 <h2 class="section-title">Selected Cases</h2>
             </div>
             <div class="work-grid">
-                <a href="https://dribbble.com/shots/27215966-Infopark-FoodShare-A-Crisis-Response-P2P-Utility-First-Draft" target="_blank" class="work-card">
+                <div class="work-card">
                     <div class="work-image">🐟</div>
                     <div class="work-content">
                         <div class="work-number">01</div>
+                        <h3 class="work-title">CMFRI Digital Survey</h3>
+                        <p class="work-desc">Transformed paper-based marine surveys into digital platform. 100% adoption, 1M+ records.</p>
+                        <div class="work-tags">
+                            <span class="work-tag">Delivery Strategy</span>
+                            <span class="work-tag">Product</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-image">🛡️</div>
+                    <div class="work-content">
+                        <div class="work-number">02</div>
+                        <h3 class="work-title">SIEM Solutions and Analytics</h3>
+                        <p class="work-desc">Defining experiece in security products recognized by DSCI Excellence Award 2022.</p>
+                        <div class="work-tags">
+                            <span class="work-tag">Developement & UX</span>
+                            <span class="work-tag">Award Winner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-image">🍽️</div>
+                    <div class="work-content">
+                        <div class="work-number">03</div>
                         <h3 class="work-title">Infopark FoodShare</h3>
                         <p class="work-desc">Crisis-response P2P platform connecting food providers with those in need.</p>
                         <div class="work-tags">
                             <span class="work-tag">UX Design</span>
+                            <span class="work-tag">Personal Projects</span>
+                            <span class="work-tag">Case Study</span>
                             <span class="work-tag">Product</span>
                         </div>
                     </div>
-                </a>
-                <a href="https://dribbble.com/shots/21788985-Cyclance-Dashboard-Redesign" target="_blank" class="work-card">
-                    <div class="work-image">🛡️</div>
-                    <div class="work-content">
-                        <div class="work-number">02</div>
-                        <h3 class="work-title">Cybersecurity Dashboard</h3>
-                        <p class="work-desc">Enterprise security dashboards recognized by DSCI Excellence Award 2022.</p>
-                        <div class="work-tags">
-                            <span class="work-tag">React.js</span>
-                            <span class="work-tag">Award Winner</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://dribbble.com/shots/27174895-Designing-Trust-Based-Parking-Exchange-The-SpotSwap-Experience" target="_blank" class="work-card">
-                    <div class="work-image">🚗</div>
-                    <div class="work-content">
-                        <div class="work-number">03</div>
-                        <h3 class="work-title">SpotSwap</h3>
-                        <p class="work-desc">Trust-based parking exchange platform solving office parking problems.</p>
-                        <div class="work-tags">
-                            <span class="work-tag">UX Strategy</span>
-                            <span class="work-tag">Product</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://dribbble.com/shots/23072320-Taskmate-An-intelligent-task-todo-management-app" target="_blank" class="work-card">
+                </div>
+                <div class="work-card">
                     <div class="work-image">✅</div>
                     <div class="work-content">
                         <div class="work-number">04</div>
                         <h3 class="work-title">Taskmate</h3>
                         <p class="work-desc">Intelligent task management app with AI-powered suggestions.</p>
                         <div class="work-tags">
-                            <span class="work-tag">Mobile</span>
+                            <span class="work-tag">Personal Projects</span>
+                            <span class="work-tag">Case Study</span>
                             <span class="work-tag">AI</span>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
@@ -1283,7 +1169,7 @@
                 </div>
                 <div class="recognition-card">
                     <span class="recognition-badge">IMPACT</span>
-                    <div class="recognition-year">2024</div>
+                    <div class="recognition-year">2025</div>
                     <h4>CMFRI Digital Transformation</h4>
                     <p>Led complete digital transformation achieving 100% adoption and onboarding 1M+ data records for marine research.</p>
                 </div>
@@ -1424,7 +1310,7 @@
         </div>
     </section>
 
-    <section class="section results">
+<!--     <section class="section results">
         <div class="container">
             <div class="section-header">
                 <p class="section-label">Why Me</p>
@@ -1449,7 +1335,7 @@
             </div>
         </div>
     </section>
-
+ -->
     <section class="section experience" id="experience">
         <div class="container">
             <div class="section-header">
@@ -1464,7 +1350,7 @@
                     <div class="timeline-company">Fingent Global Solutions, Kochi</div>
                     <ul class="timeline-tasks">
                         <li>Led CMFRI digital transformation — 100% adoption, 1M+ records</li>
-                        <li>Owned end-to-end UX from requirements to delivery</li>
+                        <li>Owned end-to-end strategy from requirements to delivery</li>
                         <li>Managed product backlog balancing features and timelines</li>
                         <li>Leveraged AI tools to reduce prototyping time by 50-80%</li>
                     </ul>
@@ -1555,27 +1441,10 @@
     </footer>
 
     <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = themeToggle.querySelector('.theme-icon');
-        
-        // Check for saved theme preference or default to dark
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        themeIcon.textContent = savedTheme === 'light' ? '☀️' : '🌙';
-
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            themeIcon.textContent = newTheme === 'light' ? '☀️' : '🌙';
-        });
-
         const audienceContent = {
             anyone: {
-                label: 'Project Coordinator & UX Analyst',
-                title: '<span class="hero-title-line">I blend UX Design, AI Prototyping</span><span class="hero-title-line">& Product Leadership</span><span class="hero-title-line">to drive <span class="hero-title-accent">results</span></span>',
+                // label: 'Project Coordinator & UX Analyst',
+                title: '<span class="hero-title-line">I blend UX Design, Developement</span><span class="hero-title-line">& Product Leadership</span><span class="hero-title-line">to drive <span class="hero-title-accent">results</span></span>',
                 subtitle: 'I coordinate projects and design intuitive digital products that solve real problems. Combining strategic thinking with hands-on execution to create experiences that feel right — crafted with care.',
                 stats: [
                     { number: '8+', label: 'Years Experience' },
@@ -1585,7 +1454,7 @@
                 ]
             },
             recruiters: {
-                label: 'Hiring Manager Looking For',
+                // label: 'Hiring Manager Looking For',
                 title: '<span class="hero-title-line">A product leader who</span><span class="hero-title-line">delivers results &</span><span class="hero-title-line">manages <span class="hero-title-accent">teams</span></span>',
                 subtitle: '8+ years bridging UX design, development & project coordination. Led cross-functional teams of 10+ members, launched products for 1M+ users, and consistently delivered on time with measurable business impact.',
                 stats: [
@@ -1596,7 +1465,7 @@
                 ]
             },
             designers: {
-                label: 'Fellow Designer Seeking',
+                // label: 'Fellow Designer Seeking',
                 title: '<span class="hero-title-line">A creative technologist</span><span class="hero-title-line">who codes what</span><span class="hero-title-line">you <span class="hero-title-accent">design</span></span>',
                 subtitle: 'I speak both design and development fluently. I can take your beautiful designs and build them pixel-perfect, while bringing AI-powered prototyping to speed up our workflow.',
                 stats: [
@@ -1607,7 +1476,7 @@
                 ]
             },
             pm: {
-                label: 'Product Manager Seeking',
+                // label: 'Product Manager Seeking',
                 title: '<span class="hero-title-line">A designer who</span><span class="hero-title-line">leads & delivers</span><span class="hero-title-line"><span class="hero-title-accent">end-to-end</span></span>',
                 subtitle: "I don't just design pretty interfaces — I manage projects end-to-end, understand technical constraints, and know how to balance user needs with delivery deadlines. I bridge design with engineering seamlessly.",
                 stats: [
@@ -1618,7 +1487,7 @@
                 ]
             },
             engineers: {
-                label: 'Engineer Looking For',
+                // label: 'Engineer Looking For',
                 title: '<span class="hero-title-line">A designer who</span><span class="hero-title-line">actually understands</span><span class="hero-title-line"><span class="hero-title-accent">code</span></span>',
                 subtitle: "I've built production apps with React.js, HTML, CSS, and JavaScript. I understand component architecture, API integration, and how to write maintainable front-end code that developers actually like working with.",
                 stats: [
@@ -1630,12 +1499,11 @@
             }
         };
 
-        const heroLabel = document.querySelector('.hero-label');
+        // const heroLabel = document.querySelector('.hero-label');
         const heroTitle = document.querySelector('.hero-title');
         const heroSubtitle = document.querySelector('.hero-subtitle');
-        const heroKpis = document.querySelectorAll('.hero-kpi');
-
-        const kpiIcons = ['⏱️', '👥', '🏆', '⚡'];
+        const statsBar = document.querySelector('.stats-bar');
+        const statItems = statsBar.querySelectorAll('.stat-item');
 
         document.querySelectorAll('.audience-tab').forEach(tab => {
             tab.addEventListener('click', function() {
@@ -1645,28 +1513,30 @@
                 document.querySelectorAll('.audience-tab').forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
 
-                heroLabel.classList.add('fade-out');
+                // heroLabel.classList.add('fade-out');
                 heroTitle.classList.add('fade-out');
                 heroSubtitle.classList.add('fade-out');
+                statsBar.classList.add('fade-out');
 
                 setTimeout(() => {
-                    heroLabel.textContent = content.label;
+                    // heroLabel.textContent = content.label;
                     heroTitle.innerHTML = content.title;
                     heroSubtitle.textContent = content.subtitle;
 
-                    heroKpis.forEach((kpi, index) => {
-                        kpi.querySelector('.hero-kpi-icon').textContent = kpiIcons[index];
-                        kpi.querySelector('.hero-kpi-number').textContent = content.stats[index].number;
-                        kpi.querySelector('.hero-kpi-label').textContent = content.stats[index].label;
+                    statItems.forEach((item, index) => {
+                        item.querySelector('.stat-number').textContent = content.stats[index].number;
+                        item.querySelector('.stat-label').textContent = content.stats[index].label;
                     });
 
-                    heroLabel.classList.remove('fade-out');
+                    // heroLabel.classList.remove('fade-out');
                     heroTitle.classList.remove('fade-out');
                     heroSubtitle.classList.remove('fade-out');
+                    statsBar.classList.remove('fade-out');
 
-                    heroLabel.classList.add('fade-in');
+                    // heroLabel.classList.add('fade-in');
                     heroTitle.classList.add('fade-in');
                     heroSubtitle.classList.add('fade-in');
+                    statsBar.classList.add('fade-in');
                 }, 300);
             });
         });
@@ -1700,12 +1570,7 @@
 
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
-            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-            const bgSolid = isLight ? 'rgba(248,247,244,0.95)' : 'rgba(13,13,13,0.95)';
-            const bgGradient = isLight 
-                ? 'linear-gradient(to bottom, rgba(248,247,244,0.9), transparent)' 
-                : 'linear-gradient(to bottom, rgba(13,13,13,0.9), transparent)';
-            nav.style.background = window.scrollY > 100 ? bgSolid : bgGradient;
+            nav.style.background = window.scrollY > 100 ? 'rgba(13,13,13,0.95)' : 'linear-gradient(to bottom, rgba(13,13,13,0.9), transparent)';
         });
     </script>
 </body>
