@@ -466,230 +466,86 @@
             color: var(--text-secondary);
         }
 
-        /* Recognitions */
-        .recognitions {
+        /* Results Section */
+        .results {
             background: var(--bg-card);
         }
 
-        .recognitions-grid {
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .result-card {
+            background: var(--bg-light);
+            padding: 35px;
+            border-radius: 14px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .result-card:hover {
+            transform: translateY(-5px);
+            background: var(--bg-dark);
+        }
+
+        .result-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .result-label {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-top: 12px;
+        }
+
+        .result-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        /* Leadership */
+        .leadership {
+            background: var(--bg-dark);
+        }
+
+        .leadership-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             margin-top: 50px;
         }
 
-        .recognition-card {
-            background: var(--bg-light);
+        .leadership-card {
+            background: var(--bg-card);
             padding: 35px;
             border-radius: 14px;
             border-left: 4px solid var(--accent);
             transition: all 0.3s ease;
         }
 
-        .recognition-card:hover {
+        .leadership-card:hover {
             transform: translateX(10px);
-            background: var(--bg-dark);
         }
 
-        .recognition-badge {
-            display: inline-block;
-            padding: 6px 14px;
-            background: var(--accent);
-            color: white;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            border-radius: 4px;
-            margin-bottom: 15px;
-        }
-
-        .recognition-card h4 {
-            font-size: 20px;
+        .leadership-card h4 {
+            font-size: 18px;
             font-weight: 600;
             margin-bottom: 10px;
+            line-height: 1.4;
         }
 
-        .recognition-card p {
+        .leadership-card p {
             font-size: 14px;
             color: var(--text-secondary);
             line-height: 1.6;
-        }
-
-        .recognition-year {
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 10px;
-        }
-
-        /* Process */
-        .process {
-            background: var(--bg-dark);
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
-            margin-top: 50px;
-        }
-
-        .process-step {
-            text-align: center;
-            position: relative;
-        }
-
-        .process-step::after {
-            content: '';
-            position: absolute;
-            top: 30px;
-            right: -10px;
-            width: 20px;
-            height: 2px;
-            background: var(--accent);
-        }
-
-        .process-step:last-child::after {
-            display: none;
-        }
-
-        .process-number {
-            width: 60px;
-            height: 60px;
-            background: var(--accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: white;
-            margin: 0 auto 20px;
-        }
-
-        .process-step h4 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .process-step p {
-            font-size: 13px;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        /* Methodology */
-        .methodology {
-            background: var(--bg-card);
-        }
-
-        .method-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .method-card {
-            background: var(--bg-light);
-            padding: 35px;
-            border-radius: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .method-card:hover {
-            transform: translateY(-5px);
-            background: var(--bg-dark);
-        }
-
-        .method-icon {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-
-        .method-card h4 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .method-list {
-            list-style: none;
-        }
-
-        .method-list li {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .method-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-        }
-
-        /* Skills */
-        .skills {
-            background: var(--bg-dark);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 50px;
-        }
-
-        .skill-card {
-            background: var(--bg-card);
-            padding: 32px;
-            border-radius: 14px;
-            border: 1px solid var(--bg-light);
-            transition: all 0.3s ease;
-        }
-
-        .skill-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
-        }
-
-        .skill-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--accent);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            margin-bottom: 20px;
-        }
-
-        .skill-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-tag {
-            padding: 6px 12px;
-            background: var(--bg-light);
-            border-radius: 4px;
-            font-size: 12px;
-            color: var(--text-secondary);
         }
 
         /* Experience */
@@ -773,49 +629,61 @@
             color: var(--accent);
         }
 
-        /* Results */
-        .results {
+        /* Skills */
+        .skills {
             background: var(--bg-dark);
         }
 
-        .results-grid {
+        .skills-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 24px;
             margin-top: 50px;
         }
 
-        .result-card {
+        .skill-card {
             background: var(--bg-card);
-            padding: 35px;
+            padding: 32px;
             border-radius: 14px;
-            text-align: center;
+            border: 1px solid var(--bg-light);
             transition: all 0.3s ease;
         }
 
-        .result-card:hover {
+        .skill-card:hover {
+            border-color: var(--accent);
             transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .skill-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            padding: 6px 12px;
             background: var(--bg-light);
-        }
-
-        .result-value {
-            font-family: 'Playfair Display', serif;
-            font-size: 56px;
-            font-weight: 700;
-            color: var(--accent);
-            line-height: 1;
-        }
-
-        .result-label {
-            font-size: 16px;
+            border-radius: 4px;
+            font-size: 12px;
             color: var(--text-secondary);
-            margin-top: 12px;
-        }
-
-        .result-desc {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-top: 8px;
         }
 
         /* References */
@@ -959,6 +827,10 @@
         }
 
         /* Content transition */
+        .hero-label, .hero-title, .hero-subtitle, .hero-cta-group, .stats-bar {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
         .fade-out {
             opacity: 0;
             transform: translateY(10px);
@@ -968,43 +840,77 @@
             animation: fadeInUp 0.4s ease forwards;
         }
 
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
-            nav { padding: 20px 30px; }
-            .nav-links { display: none; }
-            .hero { padding: 100px 30px 60px; }
-            .section { padding: 80px 30px; }
-            .about-grid,
+            nav {
+                padding: 20px 30px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 100px 30px 60px;
+            }
+
+            .section {
+                padding: 80px 30px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
             .work-grid,
-            .recognitions-grid,
-            .method-grid,
-            .skills-grid,
             .results-grid,
-            .reviews-grid { grid-template-columns: 1fr; }
-            .process-grid { grid-template-columns: repeat(3, 1fr); }
-            .work-card:nth-child(odd) { transform: none; }
-            .stats-bar { flex-wrap: wrap; gap: 30px; }
+            .skills-grid,
+            .reviews-grid,
+            .leadership-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .work-card:nth-child(odd) {
+                transform: none;
+            }
+
+            .stats-bar {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
         }
 
         @media (max-width: 640px) {
-            .hero-title { font-size: 36px; }
-            .audience-tabs { justify-content: center; }
-            .hero-cta-group { flex-direction: column; }
-            .stat-item { flex: 1 1 40%; }
-            .process-grid { grid-template-columns: 1fr; }
-            .process-step::after { display: none; }
-            body { cursor: auto; }
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .audience-tabs {
+                justify-content: center;
+            }
+
+            .hero-cta-group {
+                flex-direction: column;
+            }
+
+            .stat-item {
+                flex: 1 1 40%;
+            }
         }
     </style>
 </head>
 <body>
-
     <nav>
         <a href="#" class="nav-logo">Rahul<span>N</span></a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#work">Work</a></li>
-            <li><a href="#process">Process</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -1063,7 +969,9 @@
     <section class="section about" id="about">
         <div class="container">
             <div class="about-grid">
-                <div class="about-image">RN</div>
+                <div class="about-image">
+                    RN
+                </div>
                 <div class="about-text">
                     <p class="section-label">About</p>
                     <h3>Crafting digital experiences with purpose</h3>
@@ -1100,6 +1008,7 @@
                         <div class="work-tags">
                             <span class="work-tag">UX Strategy</span>
                             <span class="work-tag">Product</span>
+                            <span class="work-tag">Digital Transform</span>
                         </div>
                     </div>
                 </div>
@@ -1111,6 +1020,7 @@
                         <p class="work-desc">Enterprise security dashboards recognized by DSCI Excellence Award 2022.</p>
                         <div class="work-tags">
                             <span class="work-tag">React.js</span>
+                            <span class="work-tag">UI Development</span>
                             <span class="work-tag">Award Winner</span>
                         </div>
                     </div>
@@ -1143,177 +1053,16 @@
         </div>
     </section>
 
-    <section class="section recognitions" id="recognitions">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">Recognition</p>
-                <h2 class="section-title">Awards & Achievements</h2>
-            </div>
-            <p style="color: var(--text-secondary); margin-bottom: 40px; max-width: 600px;">
-                Projects I've worked on that have received industry recognition and awards.
-            </p>
-            <div class="recognitions-grid">
-                <div class="recognition-card">
-                    <span class="recognition-badge">WINNER</span>
-                    <div class="recognition-year">2022</div>
-                    <h4>DSCI Excellence Award</h4>
-                    <p>Cybersecurity dashboard recognized for outstanding user experience and innovative design in the BFSI security domain.</p>
-                </div>
-                <div class="recognition-card">
-                    <span class="recognition-badge">WINNER</span>
-                    <div class="recognition-year">2023</div>
-                    <h4>OSPA India</h4>
-                    <p>Outstanding Security Performance Award for developing enterprise security products that improved user workflows.</p>
-                </div>
-                <div class="recognition-card">
-                    <span class="recognition-badge">IMPACT</span>
-                    <div class="recognition-year">2024</div>
-                    <h4>CMFRI Digital Transformation</h4>
-                    <p>Led complete digital transformation achieving 100% adoption and onboarding 1M+ data records for marine research.</p>
-                </div>
-                <div class="recognition-card">
-                    <span class="recognition-badge">FEATURED</span>
-                    <div class="recognition-year">2024</div>
-                    <h4>Dribbble Featured</h4>
-                    <p>Several UI/UX projects featured on Dribbble's popular sections, gaining significant engagement.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section process" id="process">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">How I Work</p>
-                <h2 class="section-title">My Process</h2>
-            </div>
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="process-number">1</div>
-                    <h4>Discover</h4>
-                    <p>User interviews, stakeholder conversations, and market research to understand the problem space.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-number">2</div>
-                    <h4>Define</h4>
-                    <p>User personas, journey maps, and problem statements to crystallize the core challenge.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-number">3</div>
-                    <h4>Ideate</h4>
-                    <p>Sketching, wireframing, and rapid prototyping to explore multiple solution directions.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-number">4</div>
-                    <h4>Prototype</h4>
-                    <p>High-fidelity mockups and interactive prototypes for validation and testing.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-number">5</div>
-                    <h4>Deliver</h4>
-                    <p>Working with developers to ensure pixel-perfect implementation and iterate based on feedback.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section methodology">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">Approach</p>
-                <h2 class="section-title">Methodologies</h2>
-            </div>
-            <div class="method-grid">
-                <div class="method-card">
-                    <div class="method-icon">🎯</div>
-                    <h4>User-Centered Design</h4>
-                    <ul class="method-list">
-                        <li>Extensive user research and interviews</li>
-                        <li>Creating detailed user personas</li>
-                        <li>User journey mapping</li>
-                        <li>Usability testing and iteration</li>
-                        <li>Accessibility-first approach</li>
-                    </ul>
-                </div>
-                <div class="method-card">
-                    <div class="method-icon">⚡</div>
-                    <h4>Agile & Lean</h4>
-                    <ul class="method-list">
-                        <li>Sprint planning and backlog management</li>
-                        <li>Rapid prototyping and validation</li>
-                        <li>Incremental delivery and feedback</li>
-                        <li>Cross-functional collaboration</li>
-                        <li>Continuous improvement cycles</li>
-                    </ul>
-                </div>
-                <div class="method-card">
-                    <div class="method-icon">🤖</div>
-                    <h4>AI-Augmented Design</h4>
-                    <ul class="method-list">
-                        <li>AI-powered prototyping tools (Figma Make)</li>
-                        <li>LLM-assisted research and documentation</li>
-                        <li>Code generation with Cursor</li>
-                        <li>Automated design system components</li>
-                        <li>50-80% faster time-to-prototype</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section skills" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">Expertise</p>
-                <h2 class="section-title">Skills & Tools</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <div class="skill-title">UX Design</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">User Research</span>
-                        <span class="skill-tag">Journey Mapping</span>
-                        <span class="skill-tag">Wireframing</span>
-                        <span class="skill-tag">Prototyping</span>
-                        <span class="skill-tag">Design Systems</span>
-                        <span class="skill-tag">Usability Testing</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">📊</div>
-                    <div class="skill-title">Product</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Requirements</span>
-                        <span class="skill-tag">User Stories</span>
-                        <span class="skill-tag">Roadmap Planning</span>
-                        <span class="skill-tag">Agile/Scrum</span>
-                        <span class="skill-tag">Stakeholder Mgmt</span>
-                        <span class="skill-tag">MVP Definition</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <div class="skill-title">Tech & AI</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">HTML/CSS/JS</span>
-                        <span class="skill-tag">Claude AI</span>
-                        <span class="skill-tag">Cursor</span>
-                        <span class="skill-tag">Figma Make</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="section results">
         <div class="container">
             <div class="section-header">
                 <p class="section-label">Why Me</p>
                 <h2 class="section-title">Results</h2>
             </div>
+            <p style="color: var(--text-secondary); margin-bottom: 30px; max-width: 600px;">
+                Results come not only from numbers but from building growth foundations and continuous iteration. 
+                Here are a few highlights from my journey as a product designer and coordinator.
+            </p>
             <div class="results-grid">
                 <div class="result-card">
                     <div class="result-value">100%</div>
@@ -1328,7 +1077,37 @@
                 <div class="result-card">
                     <div class="result-value">50-80%</div>
                     <div class="result-label">Faster Prototyping</div>
-                    <div class="result-desc">Using AI tools</div>
+                    <div class="result-desc">Using AI tools (Figma Make, Claude)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section leadership">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Why Me</p>
+                <h2 class="section-title">Leadership</h2>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 30px; max-width: 600px;">
+                Fostering growth through collaboration, where everyone learns and grows together.
+            </p>
+            <div class="leadership-grid">
+                <div class="leadership-card">
+                    <h4>Led cross-functional product teams of up to 10 members</h4>
+                    <p>Coordinating design, engineering, and stakeholders to deliver complex digital transformations on time.</p>
+                </div>
+                <div class="leadership-card">
+                    <h4>Launched digital transformation projects within strict timelines</h4>
+                    <p>Led CMFRI project from 0-to-1 in record time, achieving 100% user adoption across the organization.</p>
+                </div>
+                <div class="leadership-card">
+                    <h4>Developed UX strategy and design process from scratch</h4>
+                    <p>Established comprehensive Design Systems and AI-assisted prototyping workflows for team efficiency.</p>
+                </div>
+                <div class="leadership-card">
+                    <h4>Mentored junior developers and designers</h4>
+                    <p>Guided team members on best practices in UX design, front-end development, and AI tool adoption.</p>
                 </div>
             </div>
         </div>
@@ -1374,6 +1153,50 @@
                         <li>Managed CMS operations for South Indian Bank</li>
                         <li>Ensured 24/7 system uptime</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Expertise</p>
+                <h2 class="section-title">Skills & Tools</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <div class="skill-title">UX Design</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">User Research</span>
+                        <span class="skill-tag">Journey Mapping</span>
+                        <span class="skill-tag">Wireframing</span>
+                        <span class="skill-tag">Prototyping</span>
+                        <span class="skill-tag">Design Systems</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <div class="skill-title">Product</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Requirements</span>
+                        <span class="skill-tag">User Stories</span>
+                        <span class="skill-tag">Roadmap</span>
+                        <span class="skill-tag">Agile</span>
+                        <span class="skill-tag">Stakeholders</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <div class="skill-title">Tech & AI</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Claude AI</span>
+                        <span class="skill-tag">Cursor</span>
+                        <span class="skill-tag">Figma Make</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1439,11 +1262,12 @@
     </footer>
 
     <script>
+        // Audience content data
         const audienceContent = {
             anyone: {
-                // label: 'Project Coordinator & UX Analyst',
-                title: '<span class="hero-title-line">I blend UX Design, AI Prototyping</span><span class="hero-title-line">& Product Leadership</span><span class="hero-title-line">to drive <span class="hero-title-accent">results</span></span>',
-                subtitle: 'I coordinate projects and design intuitive digital products that solve real problems. Combining strategic thinking with hands-on execution to create experiences that feel right — crafted with care.',
+                label: 'Digital Product Designer',
+                title: '<span class="hero-title-line">Planning and building</span><span class="hero-title-line">digital products with</span><span class="hero-title-line">craft & <span class="hero-title-accent">experience</span></span>',
+                subtitle: 'I design and develop intuitive digital products that solve real problems. Combining strategic thinking with hands-on execution to create experiences that feel right — crafted with care.',
                 stats: [
                     { number: '8+', label: 'Years Experience' },
                     { number: '1M+', label: 'Users Onboarded' },
@@ -1452,18 +1276,18 @@
                 ]
             },
             recruiters: {
-                // label: 'Hiring Manager Looking For',
-                title: '<span class="hero-title-line">A product leader who</span><span class="hero-title-line">delivers results &</span><span class="hero-title-line">manages <span class="hero-title-accent">teams</span></span>',
-                subtitle: '8+ years bridging UX design, development & project coordination. Led cross-functional teams of 10+ members, launched products for 1M+ users, and consistently delivered on time with measurable business impact.',
+                label: 'Hiring Manager Looking For',
+                title: '<span class="hero-title-line">A product designer who</span><span class="hero-title-line">delivers real results</span><span class="hero-title-line">and leads <span class="hero-title-accent">teams</span></span>',
+                subtitle: 'I bring 8+ years of experience bridging UX design and development. I know how to translate user needs into products that work, and how to lead teams to deliver on time.',
                 stats: [
                     { number: '8+', label: 'Years Experience' },
                     { number: '1M+', label: 'Users Impacted' },
-                    { number: '10+', label: 'Teams Led' },
-                    { number: '100%', label: 'Project Success' }
+                    { number: '100%', label: 'Project Success' },
+                    { number: '10+', label: 'Team Members Led' }
                 ]
             },
             designers: {
-                // label: 'Fellow Designer Seeking',
+                label: 'Fellow Designer Seeking',
                 title: '<span class="hero-title-line">A creative technologist</span><span class="hero-title-line">who codes what</span><span class="hero-title-line">you <span class="hero-title-accent">design</span></span>',
                 subtitle: 'I speak both design and development fluently. I can take your beautiful designs and build them pixel-perfect, while bringing AI-powered prototyping to speed up our workflow.',
                 stats: [
@@ -1474,9 +1298,9 @@
                 ]
             },
             pm: {
-                // label: 'Product Manager Seeking',
-                title: '<span class="hero-title-line">A designer who</span><span class="hero-title-line">leads & delivers</span><span class="hero-title-line"><span class="hero-title-accent">end-to-end</span></span>',
-                subtitle: "I don't just design pretty interfaces — I manage projects end-to-end, understand technical constraints, and know how to balance user needs with delivery deadlines. I bridge design with engineering seamlessly.",
+                label: 'Product Manager Seeking',
+                title: '<span class="hero-title-line">A designer who</span><span class="hero-title-line">understands technical</span><span class="hero-title-line"><span class="hero-title-accent">reality</span></span>',
+                subtitle: 'I dont just design pretty interfaces — I understand technical constraints and timelines. I know how to balance user needs with delivery deadlines and can bridge design with engineering.',
                 stats: [
                     { number: 'Agile', label: 'Certified' },
                     { number: 'End-to-End', label: 'Ownership' },
@@ -1485,9 +1309,9 @@
                 ]
             },
             engineers: {
-                // label: 'Engineer Looking For',
+                label: 'Engineer Looking For',
                 title: '<span class="hero-title-line">A designer who</span><span class="hero-title-line">actually understands</span><span class="hero-title-line"><span class="hero-title-accent">code</span></span>',
-                subtitle: "I've built production apps with React.js, HTML, CSS, and JavaScript. I understand component architecture, API integration, and how to write maintainable front-end code that developers actually like working with.",
+                subtitle: 'Ive built production apps with React.js, HTML, CSS, and JavaScript. I know component architecture, API integration, and how to write maintainable front-end code. No "make it pop" requests here.',
                 stats: [
                     { number: 'React.js', label: 'Built Apps' },
                     { number: 'HTML/CSS/JS', label: 'Expert' },
@@ -1497,35 +1321,43 @@
             }
         };
 
+        // Get elements
         const heroLabel = document.querySelector('.hero-label');
         const heroTitle = document.querySelector('.hero-title');
         const heroSubtitle = document.querySelector('.hero-subtitle');
         const statsBar = document.querySelector('.stats-bar');
         const statItems = statsBar.querySelectorAll('.stat-item');
 
+        // Tab click handler
         document.querySelectorAll('.audience-tab').forEach(tab => {
             tab.addEventListener('click', function() {
                 const audience = this.dataset.audience;
                 const content = audienceContent[audience];
 
+                // Update active tab
                 document.querySelectorAll('.audience-tab').forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
 
+                // Fade out
                 heroLabel.classList.add('fade-out');
                 heroTitle.classList.add('fade-out');
                 heroSubtitle.classList.add('fade-out');
                 statsBar.classList.add('fade-out');
 
+                // Wait and update content
                 setTimeout(() => {
+                    // Update content
                     heroLabel.textContent = content.label;
                     heroTitle.innerHTML = content.title;
                     heroSubtitle.textContent = content.subtitle;
 
+                    // Update stats
                     statItems.forEach((item, index) => {
                         item.querySelector('.stat-number').textContent = content.stats[index].number;
                         item.querySelector('.stat-label').textContent = content.stats[index].label;
                     });
 
+                    // Fade in
                     heroLabel.classList.remove('fade-out');
                     heroTitle.classList.remove('fade-out');
                     heroSubtitle.classList.remove('fade-out');
@@ -1539,6 +1371,7 @@
             });
         });
 
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1549,7 +1382,12 @@
             });
         });
 
-        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1559,16 +1397,21 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.work-card, .timeline-item, .skill-card, .result-card, .recognition-card, .method-card, .process-step, .review-card').forEach(el => {
+        document.querySelectorAll('.work-card, .timeline-item, .skill-card, .result-card, .leadership-card, .review-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
             observer.observe(el);
         });
 
+        // Nav background on scroll
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
-            nav.style.background = window.scrollY > 100 ? 'rgba(13,13,13,0.95)' : 'linear-gradient(to bottom, rgba(13,13,13,0.9), transparent)';
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(13,13,13,0.95)';
+            } else {
+                nav.style.background = 'linear-gradient(to bottom, rgba(13,13,13,0.9), transparent)';
+            }
         });
     </script>
 </body>
