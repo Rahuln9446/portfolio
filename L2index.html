@@ -66,7 +66,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 24px 60px;
+            padding: 30px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -76,19 +76,15 @@
         }
 
         .nav-logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, var(--accent), #ff7b7b);
-            border-radius: 12px;
             font-family: 'Playfair Display', serif;
-            font-size: 18px;
-            font-weight: 700;
-            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
             text-decoration: none;
-            letter-spacing: -1px;
+        }
+
+        .nav-logo span {
+            color: var(--accent);
         }
 
         .nav-links {
@@ -157,7 +153,7 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -269,6 +265,16 @@
             color: var(--text-secondary);
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        .hero-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            transition: opacity 0.3s ease;
         }
 
         /* Audience Tabs */
@@ -393,76 +399,6 @@
             font-family: 'Playfair Display', serif;
             font-size: clamp(36px, 5vw, 52px);
             font-weight: 600;
-        }
-
-        /* Why Me Section */
-        .why-me {
-            background: var(--bg-dark);
-        }
-
-        .why-me-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 50px;
-        }
-
-        .why-me-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 28px;
-            transition: all 0.3s ease;
-        }
-
-        @media (max-width: 1024px) {
-            .why-me-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 640px) {
-            .why-me-grid { grid-template-columns: 1fr; }
-        }
-
-        .why-me-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 28px;
-            transition: all 0.3s ease;
-        }
-
-        .why-me-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-        }
-
-        .why-me-card-icon {
-            font-size: 28px;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .why-me-card-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 12px;
-        }
-
-        .why-me-card-text {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        @media (max-width: 1024px) {
-            .why-me-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 640px) {
-            .why-me-grid { grid-template-columns: 1fr; }
         }
 
         /* About */
@@ -1161,10 +1097,9 @@
 <body>
 
     <nav>
-        <a href="#" class="nav-logo">RN</a>
+        <a href="#" class="nav-logo">Rahul<span>N</span></a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#why-me">Why Me</a></li>
             <li><a href="#work">Work</a></li>
             <li><a href="#process">Process</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -1192,12 +1127,16 @@
                     <span class="audience-tab" data-audience="pm">Product Managers</span>
                     <span class="audience-tab" data-audience="engineers">Engineers</span>
                 </div>
+                <p class="hero-label">Project Coordinator & UX Analyst</p>
                 <h1 class="hero-title">
-                    <span class="hero-title-line">I craft experiences</span>
-                    <span class="hero-title-line">that <span class="hero-title-accent">resonate</span> & deliver</span>
+                    <span class="hero-title-line">I blend UX Design, AI Prototyping</span>
+                    <span class="hero-title-line">& Product Leadership</span>
+                    <span class="hero-title-line">to drive <span class="hero-title-accent">results</span></span>
                 </h1>
                 <p class="hero-subtitle">
-                    Bridging design, development & leadership for 8+ years. I turn complex problems into elegant, user-centered solutions that deliver results.
+                    I design and develop intuitive digital products that solve real problems. 
+                    Combining strategic thinking with hands-on execution to create experiences 
+                    that feel right — crafted with care.
                 </p>
                 <div class="hero-cta-group">
                     <a href="#contact" class="btn btn-primary">Let's Talk</a>
@@ -1229,7 +1168,7 @@
                 <div class="hero-kpi">
                     <span class="hero-kpi-text">
                         <span class="hero-kpi-number">50-80%</span>
-                        <span class="hero-kpi-label">Faster with AI</span>
+                        <span class="hero-kpi-label">Faster</span>
                     </span>
                     <span class="hero-kpi-icon">⚡</span>
                 </div>
@@ -1243,57 +1182,19 @@
                 <div class="about-image">RN</div>
                 <div class="about-text">
                     <p class="section-label">About</p>
-                    <h3>I'm a product professional focused on planning and building digital products that make a difference.</h3>
+                    <h3>Crafting digital experiences with purpose</h3>
                     <p>
-                        With 8+ years of experience across UX design, development, and now in Product roles, I bring a unique perspective—understanding user needs, business goals, and technical realities to deliver products that work.
+                        I'm a product designer focused on planning and building digital products 
+                        that make a difference. With 8+ years bridging UX design and development, 
+                        I bring a unique perspective — understanding both user needs and technical 
+                        realities to deliver products that work.
                     </p>
                     <p>
-                        Currently at Fingent Global Solutions in a PMO role, contributing to digital transformation initiatives that have helped transition legacy systems into scalable platforms.
+                        Currently leading digital transformation at Fingent Global Solutions, where 
+                        I've helped transition legacy systems to digital platforms serving over 
+                        1 million users. I believe great products come from deeply understanding 
+                        people and then crafting solutions that serve them elegantly.
                     </p>
-                    <p>
-                        I believe great products come from deeply understanding people, aligning teams, and crafting solutions that serve them in a simple and effective way.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section why-me" id="why-me">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">Why Me</p>
-                <h2 class="section-title">What I Bring</h2>
-            </div>
-            <div class="why-me-grid">
-                <div class="why-me-card">
-                    <span class="why-me-card-icon">💻</span>
-                    <h3 class="why-me-card-title">I speak engineer</h3>
-                    <p class="why-me-card-text">I prototype in code, not just Figma. Engineers love working with me because I understand technical reality and can translate designs into clean, maintainable code.</p>
-                </div>
-                <div class="why-me-card">
-                    <span class="why-me-card-icon">⚡</span>
-                    <h3 class="why-me-card-title">AI-augmented workflow</h3>
-                    <p class="why-me-card-text">I use AI tools to accelerate discovery, prototyping & iteration. My AI-powered workflow helps me move 50-80% faster from idea to high-fidelity prototype.</p>
-                </div>
-                <div class="why-me-card">
-                    <span class="why-me-card-icon">🎯</span>
-                    <h3 class="why-me-card-title">End-to-end ownership</h3>
-                    <p class="why-me-card-text">From user research to deployment, I own the whole process. I've led products from zero to launch — no handoff gaps, no dropped balls.</p>
-                </div>
-                <div class="why-me-card">
-                    <span class="why-me-card-icon">📊</span>
-                    <h3 class="why-me-card-title">PM & Product Owner</h3>
-                    <p class="why-me-card-text">I bridge business goals with technical execution. I own the product vision, manage backlog, define user stories, prioritize ruthlessly, and ensure every feature delivers measurable value.</p>
-                </div>
-                <div class="why-me-card">
-                    <span class="why-me-card-icon">👥</span>
-                    <h3 class="why-me-card-title">Cross-functional leader</h3>
-                    <p class="why-me-card-text">I've led teams of 10+ across design, engineering & product. I align everyone toward a shared goal, foster collaboration, and drive results through clear communication.</p>
-                </div>
-                <div class="why-me-card">
-                    <span class="why-me-card-icon">🏆</span>
-                    <h3 class="why-me-card-title">Award-winning quality</h3>
-                    <p class="why-me-card-text">My cybersecurity dashboard won DSCI Excellence Award 2022. I'm proud of impact, not just output — every design decision I make is backed by data and business outcomes.</p>
                 </div>
             </div>
         </div>
@@ -1542,7 +1443,7 @@
                 </div>
                 <div class="result-card">
                     <div class="result-value">50-80%</div>
-                    <div class="result-label">Faster with AI</div>
+                    <div class="result-label">Faster Prototyping</div>
                     <div class="result-desc">Using AI tools</div>
                 </div>
             </div>
@@ -1680,7 +1581,7 @@
                     { number: '8+', label: 'Years Experience' },
                     { number: '1M+', label: 'Users Onboarded' },
                     { number: '2', label: 'Industry Awards' },
-                    { number: '50-80%', label: 'Faster with AI' }
+                    { number: '50-80%', label: 'Faster Prototyping' }
                 ]
             },
             recruiters: {
@@ -1710,7 +1611,7 @@
                 title: '<span class="hero-title-line">A designer who</span><span class="hero-title-line">leads & delivers</span><span class="hero-title-line"><span class="hero-title-accent">end-to-end</span></span>',
                 subtitle: "I don't just design pretty interfaces — I manage projects end-to-end, understand technical constraints, and know how to balance user needs with delivery deadlines. I bridge design with engineering seamlessly.",
                 stats: [
-                    { number: 'Agile', label: 'Practiced' },
+                    { number: 'Agile', label: 'Certified' },
                     { number: 'End-to-End', label: 'Ownership' },
                     { number: '50-80%', label: 'Faster Delivery' },
                     { number: '1M+', label: 'Users Scaled' }
@@ -1729,6 +1630,7 @@
             }
         };
 
+        const heroLabel = document.querySelector('.hero-label');
         const heroTitle = document.querySelector('.hero-title');
         const heroSubtitle = document.querySelector('.hero-subtitle');
         const heroKpis = document.querySelectorAll('.hero-kpi');
@@ -1743,10 +1645,12 @@
                 document.querySelectorAll('.audience-tab').forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
 
+                heroLabel.classList.add('fade-out');
                 heroTitle.classList.add('fade-out');
                 heroSubtitle.classList.add('fade-out');
 
                 setTimeout(() => {
+                    heroLabel.textContent = content.label;
                     heroTitle.innerHTML = content.title;
                     heroSubtitle.textContent = content.subtitle;
 
@@ -1756,9 +1660,11 @@
                         kpi.querySelector('.hero-kpi-label').textContent = content.stats[index].label;
                     });
 
+                    heroLabel.classList.remove('fade-out');
                     heroTitle.classList.remove('fade-out');
                     heroSubtitle.classList.remove('fade-out');
 
+                    heroLabel.classList.add('fade-in');
                     heroTitle.classList.add('fade-in');
                     heroSubtitle.classList.add('fade-in');
                 }, 300);
